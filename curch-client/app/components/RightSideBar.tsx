@@ -7,7 +7,7 @@ export default function RightSideBar() {
     <div className="w-80 bg-neutral-800 h-screen text-neutral-300 flex flex-col border-l border-neutral-700/50">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-700/50">
-        <span className="text-white font-medium">Insights</span>
+        <span className="text-white font-medium">Quick Results</span>
         <button className="p-1 hover:bg-neutral-700 rounded-full">
           <ChevronRight className="w-4 h-4 text-neutral-400" />
         </button>

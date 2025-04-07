@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 
 def scrape_website(url: str):
     headers = {
@@ -11,10 +10,8 @@ def scrape_website(url: str):
     
     paragraphs = [p.text for p in soup.find_all('p')]
     
-    
-    with open('scraped_data.json', 'w', encoding='utf-8') as f:
-        json.dump(paragraphs, f, ensure_ascii=False, indent=4)
     return paragraphs
+
 
 
 

@@ -2,8 +2,10 @@ from serpapi import GoogleSearch
 from dotenv import load_dotenv
 import os
 from scrape import scrape_website
-
+import json
 load_dotenv()
+
+scraped_results = []
 
 def search(query: str):
     params = {
@@ -23,9 +25,9 @@ def search(query: str):
     print("Found URLs:", urls)
 
 
-    for url in urls[:3]:
+    for url in urls:
         print(f"\n🔗 Scraping: {url}")
-        print(scrape_website(url)[:500], "...") 
+        r = scrape_website(url)
+        scraped_results.append(r)
  
-
-search("What is the capital of the moon?")
+    return scraped_results
